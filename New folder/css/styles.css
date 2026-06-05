@@ -230,7 +230,7 @@ img {
 .home {
   background: url("../../img/home-bg.jpg") center/cover no-repeat;
   background-color: var(--body-color);
-  padding-block: 4rem 1rem;
+  padding-block: 4rem 4rem;
 }
 
 .home__container {
@@ -244,6 +244,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .home__image {
@@ -339,6 +340,10 @@ img {
   gap: 2rem;
 }
 
+.about {
+  padding-top: 4rem;
+}
+
 .about__image {
   position: relative;
   width: 300px;
@@ -354,6 +359,21 @@ img {
   height: 100%;
   border-radius: 14px;
   object-fit: cover;
+}
+
+.about__perfil {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    padding-block: 4rem 3rem;
+  }
+
+  .home__perfil,
+  .about__perfil {
+    margin-bottom: 1rem;
+  }
 }
 
 .about__description {
@@ -681,6 +701,16 @@ img {
   transition: all .4s;
 }
 
+.contact__card--link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact__card--link:hover,
+.contact__card--link:focus-visible {
+  cursor: pointer;
+}
+
 .contact__card:hover {
   transform: translateY(-5px);
   border: 2px solid var(--first-color);
@@ -738,6 +768,126 @@ img {
 .contact__button {
   align-self: flex-start;
   width: 100%;
+}
+
+/*=============== WHATSAPP FLOAT BUTTON ===============*/
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #25D366, #1db954);
+  color: var(--white-color);
+  border: 2px solid var(--black-color);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 4px rgba(214, 23, 23, 0.16);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  overflow: visible;
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: -0.35rem;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.35);
+  animation: whatsappPulse 2.2s infinite;
+}
+
+.whatsapp-float__icon {
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp-float__tooltip {
+  position: absolute;
+  right: calc(100% + 0.75rem);
+  top: 50%;
+  transform: translateY(-50%) translateX(0.25rem);
+  background: var(--black-color);
+  color: var(--white-color);
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  font-size: var(--smaller-font-size);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border: 1px solid rgba(214, 23, 23, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+}
+
+.whatsapp-float__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--black-color);
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.42), 0 0 0 5px rgba(214, 23, 23, 0.22);
+  filter: saturate(1.1);
+}
+
+.whatsapp-float:hover .whatsapp-float__tooltip,
+.whatsapp-float:focus-visible .whatsapp-float__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .whatsapp-float {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .whatsapp-float__tooltip {
+    display: none;
+  }
+
+  .whatsapp-float__icon {
+    font-size: 1.55rem;
+  }
+}
+
+.contact__message {
+  text-align: center;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  min-height: 1.5rem;
+  transition: all .3s ease;
 }
 
 /*=============== FOOTER ===============*/

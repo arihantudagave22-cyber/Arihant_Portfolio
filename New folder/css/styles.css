@@ -367,12 +367,16 @@ img {
 
 @media screen and (max-width: 767px) {
   .home {
-    padding-block: 4rem 3rem;
+    padding-block: 4rem 5rem;
   }
 
   .home__perfil,
   .about__perfil {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .about {
+    padding-top: 5rem;
   }
 }
 

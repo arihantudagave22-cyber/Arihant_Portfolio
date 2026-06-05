@@ -367,16 +367,31 @@ img {
 
 @media screen and (max-width: 767px) {
   .home {
-    padding-block: 4rem 5rem;
+    padding-block: 4rem 7rem;
+  }
+
+  .home__container {
+    gap: 2.5rem;
+  }
+
+  .home__image,
+  .about__image {
+    width: min(100%, 280px);
+    height: min(280px, 72vw);
+    margin-inline: auto;
   }
 
   .home__perfil,
   .about__perfil {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .about {
-    padding-top: 5rem;
+    padding-top: 7rem;
+  }
+
+  .about__container {
+    gap: 2.5rem;
   }
 }
 

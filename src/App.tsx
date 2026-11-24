@@ -355,7 +355,10 @@ function App() {
       </footer>
 
       <a aria-label="Chat with me on WhatsApp" className="whatsapp-button fixed bottom-5 right-5 z-40 grid size-12 place-items-center rounded-full border border-white/15 bg-emerald-500 text-white shadow-xl shadow-black/30 transition hover:-translate-y-1 hover:bg-emerald-400" href="https://wa.me/918867718108?text=Hi%20Arihant,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." rel="noreferrer" target="_blank" title="Chat with me on WhatsApp">
-        <span aria-hidden="true" className="text-lg font-bold">W</span>
+        <svg aria-hidden="true" className="size-6" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" viewBox="0 0 24 24">
+          <path d="M20.2 11.5a8.2 8.2 0 0 1-12.4 7.1L4 19.7l1.1-3.6a8.2 8.2 0 1 1 15.1-4.6Z" />
+          <path d="M8.4 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.3l.7 1.6c.1.2.1.4 0 .5l-.5.6c-.1.1-.1.3 0 .5.4.7 1 1.3 1.8 1.7.2.1.4.1.5-.1l.6-.7c.1-.2.3-.2.5-.1l1.5.7c.2.1.3.2.3.4 0 .3-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.2-2.1-.8-3.2-1.8-1.1-1-1.8-2.1-2-3-.2-.6 0-1.2.4-2Z" />
+        </svg>
       </a>
       {showScrollTop && <button aria-label="Scroll to top" className="fixed bottom-5 right-[4.75rem] z-40 grid size-12 place-items-center rounded-xl border border-white/10 bg-panel text-slate-200 shadow-xl shadow-black/30 transition hover:border-teal-300/40 hover:text-teal-200" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} type="button"><Icon name="up" /></button>}
     </div>

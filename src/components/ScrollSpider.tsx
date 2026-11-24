@@ -159,7 +159,7 @@ export default function ScrollSpider() {
       const tangent = path.getTangentAt(currentProgress);
       container.style.transform = `translate3d(${(position.x - spiderSize / 2).toFixed(2)}px, ${(position.y - spiderSize / 2).toFixed(2)}px, 0)`;
       spider.rotation.z = getSpiderFacingAngle(tangent.x, tangent.y, scrollDirection) - currentLean * 0.28;
-      const gaitPhase = currentProgress * pathLength / 220 * Math.PI * 2;
+      const gaitPhase = currentProgress * pathLength / 320 * Math.PI * 2;
       spider.position.y = Math.abs(Math.sin(gaitPhase)) * 0.035;
       legs.forEach(({ group, lowerLeg, side, index }) => {
         const legPhase = gaitPhase + index * Math.PI / 2 + (side < 0 ? Math.PI : 0);

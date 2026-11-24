@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <linearGradient id="background" x1="72" y1="30" x2="1097" y2="622" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B2C"/>
+      <stop offset="1" stop-color="#0A111B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="450" y1="95" x2="1024" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#41E4D2"/>
+      <stop offset="1" stop-color="#51A8F0"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1A3035"/>
+      <stop offset="1" stop-color="#142128"/>
+    </linearGradient>
+    <filter id="shadow" x="170" y="46" width="864" height="576" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="640" rx="28" fill="url(#background)"/>
+  <circle cx="934" cy="155" r="220" fill="#35D9C2" fill-opacity=".08"/>
+  <circle cx="238" cy="572" r="200" fill="#3E86DB" fill-opacity=".08"/>
+  <ellipse cx="604" cy="560" fill="#000" fill-opacity=".5" filter="url(#shadow)" rx="394" ry="38"/>
+  <rect x="198" y="66" width="804" height="508" rx="24" fill="#0C161D" stroke="#E4FFFF" stroke-opacity=".14" stroke-width="2"/>
+  <rect x="198" y="66" width="804" height="47" rx="24" fill="#15242A"/>
+  <path d="M198 89a23 23 0 0 1 23-23h758a23 23 0 0 1 23 23v24H198V89Z" fill="#15242A"/>
+  <circle cx="227" cy="90" r="5" fill="#F16D76"/>
+  <circle cx="246" cy="90" r="5" fill="#F2C36B"/>
+  <circle cx="265" cy="90" r="5" fill="#4ED5AF"/>
+  <rect x="221" y="139" width="179" height="407" rx="14" fill="#111E24"/>
+  <path d="M246 171h17v17h-17z" rx="5" fill="url(#accent)"/>
+  <path d="M251 179h7" stroke="#0C161D" stroke-width="3" stroke-linecap="round"/>
+  <text x="273" y="184" fill="#F1F7F7" font-family="Arial,sans-serif" font-size="17" font-weight="700">fittrack</text>
+  <rect x="244" y="217" width="133" height="34" rx="9" fill="#20343A"/>
+  <circle cx="261" cy="234" r="5" fill="#4ADACB"/>
+  <text x="276" y="239" fill="#E5F3F4" font-family="Arial,sans-serif" font-size="12">Dashboard</text>
+  <text x="263" y="281" fill="#91A6AC" font-family="Arial,sans-serif" font-size="12">My workouts</text>
+  <text x="263" y="319" fill="#91A6AC" font-family="Arial,sans-serif" font-size="12">Measurements</text>
+  <text x="263" y="357" fill="#91A6AC" font-family="Arial,sans-serif" font-size="12">Challenges</text>
+  <circle cx="255" cy="277" r="4" fill="#718A90"/>
+  <circle cx="255" cy="315" r="4" fill="#718A90"/>
+  <circle cx="255" cy="353" r="4" fill="#718A90"/>
+  <circle cx="255" cy="391" r="4" fill="#718A90"/>
+  <text x="263" y="395" fill="#91A6AC" font-family="Arial,sans-serif" font-size="12">Progress</text>
+  <text x="432" y="170" fill="#F1F7F7" font-family="Arial,sans-serif" font-size="24" font-weight="700">Your progress</text>
+  <text x="432" y="193" fill="#91A6AC" font-family="Arial,sans-serif" font-size="12">A little stronger every week.</text>
+  <rect x="432" y="216" width="158" height="95" rx="13" fill="url(#card)" stroke="#E4FFFF" stroke-opacity=".08"/>
+  <rect x="604" y="216" width="158" height="95" rx="13" fill="url(#card)" stroke="#E4FFFF" stroke-opacity=".08"/>
+  <rect x="776" y="216" width="193" height="95" rx="13" fill="url(#card)" stroke="#E4FFFF" stroke-opacity=".08"/>
+  <text x="450" y="242" fill="#A4B8BC" font-family="Arial,sans-serif" font-size="11">WORKOUTS</text>
+  <text x="450" y="280" fill="#F4FAF9" font-family="Arial,sans-serif" font-size="28" font-weight="700">12</text>
+  <text x="476" y="279" fill="#4ADACB" font-family="Arial,sans-serif" font-size="11">this month</text>
+  <text x="622" y="242" fill="#A4B8BC" font-family="Arial,sans-serif" font-size="11">ACTIVE TIME</text>
+  <text x="622" y="280" fill="#F4FAF9" font-family="Arial,sans-serif" font-size="28" font-weight="700">8.5</text>
+  <text x="671" y="279" fill="#A4B8BC" font-family="Arial,sans-serif" font-size="11">hours</text>
+  <text x="794" y="242" fill="#A4B8BC" font-family="Arial,sans-serif" font-size="11">GOAL COMPLETION</text>
+  <text x="794" y="280" fill="#F4FAF9" font-family="Arial,sans-serif" font-size="28" font-weight="700">78%</text>
+  <path d="M913 263a22 22 0 1 1-11-19" stroke="#294349" stroke-width="7" stroke-linecap="round"/>
+  <path d="M902 244a22 22 0 1 1-10 38" stroke="url(#accent)" stroke-width="7" stroke-linecap="round"/>
+  <rect x="432" y="330" width="537" height="194" rx="13" fill="url(#card)" stroke="#E4FFFF" stroke-opacity=".08"/>
+  <text x="452" y="358" fill="#F1F7F7" font-family="Arial,sans-serif" font-size="14" font-weight="700">Weekly activity</text>
+  <text x="452" y="377" fill="#91A6AC" font-family="Arial,sans-serif" font-size="10">Minutes of movement</text>
+  <path d="M464 478h469M464 444h469M464 410h469" stroke="#DFEEEE" stroke-opacity=".08"/>
+  <path d="m477 460 62-29 61 10 62-36 62 12 62-43 62 19 62-30 62 3" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="477" cy="460" r="4" fill="#53E4D2"/>
+  <circle cx="601" cy="441" r="4" fill="#53E4D2"/>
+  <circle cx="725" cy="417" r="4" fill="#53E4D2"/>
+  <circle cx="849" cy="393" r="4" fill="#53E4D2"/>
+  <circle cx="911" cy="393" r="4" fill="#53E4D2"/>
+  <text x="470" y="503" fill="#81969C" font-family="Arial,sans-serif" font-size="10">MON</text>
+  <text x="593" y="503" fill="#81969C" font-family="Arial,sans-serif" font-size="10">TUE</text>
+  <text x="716" y="503" fill="#81969C" font-family="Arial,sans-serif" font-size="10">WED</text>
+  <text x="839" y="503" fill="#81969C" font-family="Arial,sans-serif" font-size="10">THU</text>
+  <path d="M456 581h288" stroke="#43E0D0" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+</svg>

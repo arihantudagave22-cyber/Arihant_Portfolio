@@ -62,29 +62,6 @@ export function installSlowScroll(): () => void {
     scrollByScaledAmount(deltaX, deltaY);
   };
 
-  let lastTouchY: number | null = null;
-  const onTouchStart = (event: TouchEvent) => {
-    lastTouchY = event.touches.length === 1 && !isEditableTarget(event.target)
-      ? event.touches[0].clientY
-      : null;
-  };
-  const onTouchMove = (event: TouchEvent) => {
-    if (lastTouchY === null) return;
-    if (event.touches.length !== 1 || !event.cancelable) {
-      lastTouchY = null;
-      return;
-    }
-
-    const touchY = event.touches[0].clientY;
-    const deltaY = lastTouchY - touchY;
-    lastTouchY = touchY;
-    event.preventDefault();
-    scrollByScaledAmount(0, deltaY);
-  };
-  const resetTouch = () => {
-    lastTouchY = null;
-  };
-
   const onKeyDown = (event: KeyboardEvent) => {
     if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || isEditableTarget(event.target)) return;
     if (event.key === " " && event.target instanceof Element && event.target.closest("a, button, [role='button']")) return;
@@ -123,19 +100,11 @@ export function installSlowScroll(): () => void {
   };
 
   document.addEventListener("wheel", onWheel, { passive: false });
-  document.addEventListener("touchstart", onTouchStart, { passive: true });
-  document.addEventListener("touchmove", onTouchMove, { passive: false });
-  document.addEventListener("touchend", resetTouch, { passive: true });
-  document.addEventListener("touchcancel", resetTouch, { passive: true });
   document.addEventListener("keydown", onKeyDown);
 
   return () => {
     window.cancelAnimationFrame(animationFrame);
     document.removeEventListener("wheel", onWheel);
-    document.removeEventListener("touchstart", onTouchStart);
-    document.removeEventListener("touchmove", onTouchMove);
-    document.removeEventListener("touchend", resetTouch);
-    document.removeEventListener("touchcancel", resetTouch);
     document.removeEventListener("keydown", onKeyDown);
   };
 }
